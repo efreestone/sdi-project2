@@ -10,50 +10,66 @@ var start = "Echo and I take off from the garage in my car. ",
     zombiesInDrive = "yes", //Procedure argument
     booVar1 = true, //Boolean argument 1
     booVar2 = false //Boolean argument 2,
+    string1 = "field",
+    string2 = "long way"
 ;
 
-console.log(start) //Start
+var say = function(message) { console.log(message); }; //Console.log Function
+
+say(start);
 
 if (zombiesInDrive === "yes") { //Procedure
-        console.log("I take out several Zombies like Bowling Pins as I speed down the driveway. ") 
-        } else {
-            console.log("No Zombies in the driveway. Looks like we're free and clear for the moment. ")
-            }
-;
-
-console.log("Is the road clear? ")
-
-var booFunc = function(booVar1, booVar2) { //Boolean Function
-    if (booVar1 == booVar2) {
-        console.log("We need to head west but the road is blocked by an overturned Semi-truck.")
-        } else {
-            console.log("Roads are clear and we're heading in the right direction! ")
-        }
+    say("I take out several Zombies like Bowling Pins as I speed down the driveway. ") 
+} else {
+    say("No Zombies in the driveway. Looks like we're free and clear for the moment. ")
 };
 
-//booFunc(false) //Boolean Function Output
+say("Is the road clear? ");
 
-//return booFunc;
+var booFunc = function(booVar1, booVar2) { //Boolean Function
+    if (booVar1 === booVar2) {
+        say("We need to head west but the road is blocked by an overturned Semi-truck.")
+        } else {
+            say("Roads are clear and we're heading in the right direction! ")
+        } return booFunc;
+};
 
-console.log("Should I try cutting through the field or just take the long way around? ")
+booFunc(); //Boolean Function Output
 
+//say("Should I try cutting through the field or just take the long way around? ")
 
-console.log("Do we cut through downtown of take side streets? ")
+var stringFunc = function(string1, string2) {
+    var yes = true,
+        no = false;
+    if (yes === no) {
+        say("Que offroading scene in non-offroading vehicle! ");
+    } else {
+        say("Should I take the " + string2 + " around or try cutting through the " + string1 + "? ");
+    } return stringFunc;
+};
+
+stringFunc(string1, string2); //String Function Output
+
+say("It will add even more time and distance but at least the" + string2 + "should be safer. ");
+
+say("The " + string1 + " would be fun but if we get stuck we're done for! " + string2 + " it is! ");
+
+say("We reach town safely. Now we must make it all the way across to the other side of town. ");
+
+say("Do we cut through downtown of take side streets? ");
 
 var numberFunc = function (number1, number2)
     number1 = 10,
-    number2 = 5
-    
-;
+    number2 = 5;
     
 var whileLoop = 5;
     while (whileLoop > 0) {
-        console.log("Side streets used to be light on traffic so it's probably clear of abandoned cars. Sounds like a safe bet to me! ")
+        say("Side streets used to be light on traffic so it's probably clear of abandoned cars. Sounds like a safe bet to me! ")
         whileLoop-=5
     }
 ;
 
-console.log("Do we cut through downtown of take side streets? ")
+//console.log("Do we cut through downtown of take side streets? ")
 /*
 var numberFunc = function (number1, number2) { //Number Function
     if (number1<number2) {
@@ -65,3 +81,14 @@ var numberFunc = function (number1, number2) { //Number Function
 
 numberFunc(7, 5) //Number Function Output
 */
+
+var missCars = ["left", "right", "left", "right"],
+    zombiesHit = [2, 7, 13, 5]
+for (var carsMissed = 0; numberZombies < zombiesHit.length; carsMissed++){
+    var numberZombies = 27,
+        missCar = missCars[missNumber];
+say("I plow through" + missCar + " zombies and swerve" + zombiesHit + "to miss a car");
+for (var zombies = 0; zombies < zombiesHit; zombies +=5) {
+    var zombiesLeft = zombiesHit - zombies;
+    say("We made it through!") }
+};
