@@ -50,11 +50,11 @@ var stringFunc = function(string1, string2) {
 
 stringFunc(string1, string2); //String Function Output
 
-say("It will add even more time and distance but at least the" + string2 + "should be safer. ");
+say("It will add even more time and distance but at least the " + string2 + " should be safer. ");
 
 say("The " + string1 + " would be fun but if we get stuck we're done for! " + string2 + " it is! ");
 
-say("We reach town limits safely. Now we must make it all the way across to the other side of town. ");
+say("We reach town limits safely. The next checkpoint between here and the Warehouse Store is downtown. ");
 
 var blocksLeft = function(blocks) { //Number Function
     
