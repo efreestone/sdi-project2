@@ -12,7 +12,9 @@ var start = "Echo and I take off from the garage in my car. ", //Start
     booVar2 = false //Boolean argument 2
     string1 = "field", //String argument 1
     string2 = "long way", //String argument 2
-    blocks = 5 
+    blocks = 5, //Number argument
+    choices = ["Downtown ", "Side streets "], //Array
+    end = "...to be continued... "
 ;
 
 var say = function(message) { console.log(message); }; //Console.log Function
@@ -70,7 +72,33 @@ var blocksLeft = function(blocks) { //Number Function
         };
         say("We covered " + blocks + " blocks.");
     say("Do we cut through downtown of take side streets? ");
+    return blocksToGo;
 };
 
 var blocksCovered = blocksLeft(blocks); //Number Function Output
+
+var arrayFunc = function(choices) {
+    
+    var myArray = ["have heavy traffic which probably means lots of abandoned cars blocking the road. ", "be light on traffic so its probably clear of abandoned cars. "];
+    
+    for (var i=0, j=choices.length; i < j; i++) {
+        say(choices[i] + "used to " + myArray[i]);
+    }
+    return choices;
+};
+
+arrayFunc(choices);
+
+say(choices[1] + "sounds like a safer choice to me. ");
+
+say("We turn on to Park Street and it's swarming with zombies!");
+
+say("Then the car dies... ");
+
+say(end);
+
+
+
+
+
 
